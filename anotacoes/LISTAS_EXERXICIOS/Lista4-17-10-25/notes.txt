@@ -1,0 +1,12 @@
+Foi pedido para fazer um exercício em GoLang, onde o algoritmo deveria ler um arquivo ppm e apresentar
+os valores de cada pixel. Foi pedido para cada um criar o seu próprio arquivo .ppm para fazer o exercício.
+
+Isso foi no dia 17/10/2025
+
+=========================================================================
+Fiz um teste com um arquivo .ppm nao estando no padrão p3. Para o teste, fiz um arquivo 8x8 onde tinham apenas
+cores verdes e pretas. O objetivo era fazer uma imagem de um Creeper do Minecraft.
+
+Problema:
+A saída ficou muito grando pq tinham muitos pixels na imagem, o código printa o valor de cada pixel da imagem, ou seja, 
+foram mostrados cerca de 64 linhas apenas de valores de cores.

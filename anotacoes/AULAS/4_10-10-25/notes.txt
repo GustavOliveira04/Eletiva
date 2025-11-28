@@ -1,0 +1,3 @@
+Foi pedido para resolver alguns exercícios do Go by exmaple durante a aula.
+
+Isso ocorreu no dia (10/10/2025)❗

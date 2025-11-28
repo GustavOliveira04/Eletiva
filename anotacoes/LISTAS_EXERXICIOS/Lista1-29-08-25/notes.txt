@@ -1,0 +1,5 @@
+Foi passado uma lista de 25 exercícios para ser resolvida. 
+A maioria dos exercícios eram de nivel básico, 
+para que torne facil o aprendizado da linguagem GoLang.
+
+Exercícios foram passados na data de: (29/08/2025)❗

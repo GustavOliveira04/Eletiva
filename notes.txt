@@ -1,0 +1,63 @@
+ANOTAÇÕES PARA PORTIFÓLIO DA MATÉRIA DE ELETIVA
+
+- No dia 29/08/2025 (
+    Foi passado uma lista de 25 exercícios para ser resolvida. 
+    A maioria dos exercícios eram de nivel básico, 
+    para que torne facil o aprendizado da linguagem GoLang.
+    )
+ 
+- No dia 05/09/2025 (
+    Foi passado para pegar apenas 5 dos 10 primeiros exercícios passados anteriormente.
+    O objetivo era realizar teste de Benchmark nos exercícios, para medir sua velocidade de execução
+    e em seguida, construir um relatório com base nos resultados adquiridos.
+    )
+
+- No dia 19/09/2025 (
+    Estava acontecendo a semana da Administração no IFMS, onde fomos liberados
+    para assistir o encerramento do evento **sem aula**
+    )
+
+- No dia 26/09/2025 (    
+    Não teve conteúdo da matéria, mas o professor Alex decidiu que queria ver
+    como está o andamento do portifólio e as atividades passadas até o momento **sem presença(?)**
+    )
+
+- No dia 03/10/2025 (
+    Sem aula.
+    )
+
+- No dia 10/10/2025 (
+    Foi pedido para que terminasse-mos os exercícios que foram passados anteriormente na sala de aula.
+    )
+
+- No dia 17/10/2025 (
+    Foi pedido para fazer um exercício em GoLang, onde o algoritmo deveria ler um arquivo ppm e apresentar
+    os valores de cada pixel. Foi pedido para cada um criar o seu próprio arquivo .ppm para fazer o exercício.
+    )
+
+- No dia 24/10/2025 (
+    O que foi passado: O professor revisou atributos e funções no site gobyexample.com tarefa: descobrir diferença entre defer e panic
+    ) HOUVE CHAMADA
+
+
+- No dia 31 de outubro (
+    Recesso
+    ) SEM AULA
+
+
+- No dia 7 de novembro (
+    Palestra de conciencia negra
+    ) TEVE CHAMADA MAS NAO TIVEMOS CONTEUDO DA AULA
+
+
+- No dia 14 de novembro (
+    Colação de grau antigo tads 5
+    ) SEM AULA
+
+
+- No dia 21 de novembro (
+    Recesso
+    ) SEM AULA
+
+===========================================================================================================================================
+

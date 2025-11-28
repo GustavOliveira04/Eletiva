@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Eletiva</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="gopher-wrapper">
+                        <circle cx="100" cy="100" r="75" fill="#00ADD8"/>
+                        <circle cx="85" cy="85" r="8" fill="#fff"/>
+                        <circle cx="115" cy="85" r="8" fill="#fff"/>
+                        <ellipse cx="100" cy="110" rx="20" ry="15" fill="#fff"/>
+                        <path d="M 100 100 L 100 120 L 90 125 L 100 120 L 110 125 Z" fill="#00ADD8"/>
+                    </svg>
+
+                </div>
+                <div class="title-section">
+                    <h1>Portfólio <span class="go-text">Go</span>Lang</h1>
+                    <div class="version-badge">v1.21</div>
+                </div>
+            </div>
+            <p class="subtitle">Registro das aulas e atividades da disciplina de Eletiva</p>
+            <div class="description">
+                <p>Esta página apresenta o portfólio completo das aulas e atividades desenvolvidas na Unidade Curricular de Eletiva, focada no aprendizado da linguagem GoLang.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="go-pattern"></div>
+        <div class="cards-container" id="cardsContainer">
+        </div>
+    </main>
+
+    <div id="aulaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('aulaModal')">&times;</span>
+            <h2 id="aulaModalTitle">Aula</h2>
+            <div class="modal-body">
+                <div id="aulaModalContent"></div>
+            </div>
+        </div>
+    </div> 
+
+    <div id="exerciciosModal" class="modal">
+        <div class="modal-content large">
+            <span class="close" onclick="closeModal('exerciciosModal')">&times;</span>
+            <h2>29/08/2025 - 25 Exercícios de GoLang</h2>
+            <div class="modal-body">
+                <p><strong>Entrega de uma lista com 25 exercícios de GoLang.</strong></p>
+                <p>Exercícios de nível básico para introdução à linguagem.</p>
+                
+                <div class="exercises-tabs">
+                    <div class="tabs-container" id="exercisesTabs"></div>
+                    <div class="exercise-content" id="exerciseContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="benchmarkModal" class="modal">
+        <div class="modal-content large">
+            <span class="close" onclick="closeModal('benchmarkModal')">&times;</span>
+            <h2>05/09/2025 - Testes de Benchmark</h2>
+            <div class="modal-body">
+                <p><strong>Escolher 5 dos 10 primeiros exercícios para realizar testes de Benchmark.</strong></p>
+                <p>Produção de um relatório com os resultados obtidos.</p>
+                
+                <div class="benchmark-section">
+                    <h3>Exercícios com Benchmark</h3>
+                    <div id="benchmarkContent"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ppmModal" class="modal">
+        <div class="modal-content large">
+            <span class="close" onclick="closeModal('ppmModal')">&times;</span>
+            <h2>17/10/2025 - Leitura de arquivo .ppm</h2>
+            <div class="modal-body">
+                <p><strong>Atividade prática em GoLang:</strong></p>
+                <ul>
+                    <li>Ler um arquivo .ppm</li>
+                    <li>Exibir os valores dos pixels</li>
+                    <li>Cada aluno criou seu próprio arquivo .ppm</li>
+                </ul>
+                
+                <div class="code-section">
+                    <h3>Exercício - Leitura de arquivo PPM</h3>
+                    <pre><code id="ppmCode"></code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Desenvolvido por <strong>Gustavo Felipe Oliveira Freitas</strong></p>
+        <p class="footer-subtitle">Portfólio da Disciplina Eletiva - TADS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+Foi passado para pegar apenas 5 dos 10 primeiros exercícios passados anteriormente.
+O objetivo era realizar teste de Benchmark nos exercícios, para medir sua velocidade de execução
+e em seguida, construir um relatório com base nos resultados adquiridos.
+
+Exercícios foram passados na data de: (05/09/2025)❗
