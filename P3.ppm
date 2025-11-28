@@ -1,8 +1,8 @@
 P3
-# Esta é a largura e a altura
+
 3 1
 255
-255 0 0    # Pixel Vermelho
-0 255 0    # Pixel Verde
-0 0 255    # Pixel Azul
-255 255 255 # Pixel Branco 
+255 0 0
+0 255 0
+0 0 255
+255 255 255
