@@ -18,7 +18,7 @@ let exerciciosBenchmark = [];
 let ppmCodigo = "";
 
 async function loadExercisesFromFiles() {
-  const base = "anotacoes/LISTAS_EXERXICIOS/Lista1-29-08-25";
+  const base = "../anotacoes/LISTAS_EXERXICIOS/Lista1-29-08-25";
   const lista = [];
   for (let i = 1; i <= 25; i++) {
     const path = `${base}/ex${i}.go`;
@@ -33,7 +33,7 @@ async function loadExercisesFromFiles() {
 }
 
 async function loadBenchmarkFiles() {
-  const base = "anotacoes/LISTAS_EXERXICIOS/Lista2-05-09-25";
+  const base = "../anotacoes/LISTAS_EXERXICIOS/Lista2-05-09-25";
   const lista = [];
   for (let n = 1; n <= 6; n++) {
     const codigo = await fetch(`${base}/ex${n}_Teste/ex${n}.go`).then(r => r.text());
@@ -49,7 +49,7 @@ async function loadBenchmarkFiles() {
 }
 
 async function loadPPM() {
-  ppmCodigo = await fetch("anotacoes/LISTAS_EXERXICIOS/Lista4-17-10-25/ArquivoPPM/read-ppm.go").then(r => r.text());
+  ppmCodigo = await fetch("../anotacoes/LISTAS_EXERXICIOS/Lista4-17-10-25/ArquivoPPM/read-ppm.go").then(r => r.text());
 }
 
 function renderCards() {
