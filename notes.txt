@@ -4,7 +4,7 @@ ANOTAÇÕES PARA PORTIFÓLIO DA MATÉRIA DE ELETIVA
     Foi passado uma lista de 25 exercícios para ser resolvida. 
     A maioria dos exercícios eram de nivel básico, 
     para que torne facil o aprendizado da linguagem GoLang.
-    )
+    ) 
  
 - No dia 05/09/2025 (
     Foi passado para pegar apenas 5 dos 10 primeiros exercícios passados anteriormente.
