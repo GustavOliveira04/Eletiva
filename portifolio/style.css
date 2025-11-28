@@ -16,7 +16,7 @@
   --trans: 0.3s;
   --grad: linear-gradient(135deg, #00add8, #5dc9e2);
 }
-
+ 
 body {
   font-family: "Inter", sans-serif;
   background: linear-gradient(135deg, #f5f9fc 0%, #ffffff 100%);

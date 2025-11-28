@@ -16,7 +16,7 @@
 let exercicios = [];
 let exerciciosBenchmark = [];
 let ppmCodigo = "";
-
+ 
 async function loadExercisesFromFiles() {
   const base = "anotacoes/LISTAS_EXERXICIOS/Lista1-29-08-25";
   const lista = [];
