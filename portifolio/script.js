@@ -1,5 +1,5 @@
 ﻿const aulas = [
-  { id: 1, data: "29/08/2025", titulo: "Lista de 25 exercícios de GoLang", descricao: "Entrega de uma lista com 25 exercícios de GoLang. Exercícios de nível básico para introdução à linguagem.", tipo: "exercicios" },
+  { id: 1, data: "29/08/2025", titulo: "Lista de 25 exercícios de GoLang + bonus", descricao: "Entrega de uma lista com 25 exercícios de GoLang. Exercícios de nível básico para introdução à linguagem.", tipo: "exercicios" },
   { id: 2, data: "05/09/2025", titulo: "Testes de Benchmark em 5 exercícios", descricao: "Escolher 5 dos 10 primeiros exercícios para realizar testes de Benchmark. Produção de um relatório com os resultados obtidos.", tipo: "benchmark" },
   { id: 3, data: "19/09/2025", titulo: "Semana da Administração - Sem aula", descricao: "Semana da Administração. Liberados para assistir o evento.", tipo: "aula", anotacao: "Durante essa semana de aula estava ocorrendo a Semana da Administração no campus. (15/09 --> 19/09)\nFomos dispensados para assistir ao evento no dia da aula.\n\nIsso ocorreu no dia (19/09/2025)" },
   { id: 4, data: "26/09/2025", titulo: "Verificação do portfólio e atividades", descricao: "Sem conteúdo novo. Professor Alex verificou o andamento do portfólio e atividades. Presença não confirmada.", tipo: "aula", anotacao: "Nesse dia, professor Alex pediu para ver como está o andamento do portifólio até aquele momento.\nEra preciso ir até sua sala e apresentar como estava o trabalho e tirar dúvidas.\n\nIsso ocorreu no dia (26/09/2025)" },
@@ -10,8 +10,38 @@
   { id: 9, data: "31/10/2025", titulo: "Recesso - Sem aula", descricao: "Recesso conforme calendário.", tipo: "aula" },
   { id: 10, data: "07/11/2025", titulo: "Palestra de consciência negra", descricao: "Palestra de consciência negra. Teve chamada, mas não houve conteúdo da disciplina.", tipo: "aula" },
   { id: 11, data: "14/11/2025", titulo: "Formatura do antigo TADS 5 - Sem aula", descricao: "No dia houve a formatura do antigo TADS 5, fomos liberados, sem aula.", tipo: "aula" },
-  { id: 12, data: "21/11/2025", titulo: "Recesso - Sem aula", descricao: "Recesso conforme calendário.", tipo: "aula" }
+  { id: 12, data: "21/11/2025", titulo: "Recesso - Sem aula", descricao: "Recesso conforme calendário.", tipo: "aula" },
+  { id: 13, data: "28/11/2025", titulo: "Entrega do portfólio", descricao: "Professor Alex verificou os portfólios prontos e estendeu a data de entrega até o dia 05 de Dezembro.", tipo: "aula", anotacao: "Professor Alex olhou os portfólios que estavam prontos e, considerando o tempo, estendeu a data de entrega até o dia 05 de Dezembro.\n\nIsso ocorreu no dia (28/11/2025)" },
+  { id: 14, data: "05/12/2025", titulo: "Entrega final do portfólio - Sem aula", descricao: "Professor não estará presente. Fomos liberados da aula para finalizar ou entregar o portfólio via e-mail.", tipo: "aula", anotacao: "Professor não estará presente no campus. Fomos liberados da aula para finalizar ou entregar o portfólio via e-mail.\n\nIsso ocorreu no dia (05/12/2025)" }
 ];
+
+const expectedOutputs = {
+  1: "Soma: 9",
+  2: "Divisão: 25",
+  3: "Antecessor: 5 | Sucessor: 7",
+  4: "Par e Positivo",
+  5: "É primo? false",
+  6: "Ordenados:  [0 1 2 3 4 5 6 7 8 9]",
+  7: "Ordenado:   addeenooorstu",
+  8: "[Árvore de decisão interativa - requer entrada do usuário]",
+  9: "Valor: 10  | Endereço: 0xc00000a078",
+  10: "Mover disco de A para C\nMover disco de A para B\nMover disco de C para B\nMover disco de A para C\nMover disco de B para A\nMover disco de B para C\nMover disco de A para C",
+  11: "Dia da semana: Saturday",
+  12: "Iguais? false",
+  13: "Moda: 3",
+  14: "É palíndromo? true",
+  15: "Área: 15",
+  16: "30°C = 86 °F\n86°F = 30 °C",
+  17: "[Programa interativo - requer entrada do usuário]",
+  18: "[Cria arquivo JPEG - sem saída em console]",
+  19: "Vogais: 3 Consoantes: 4",
+  20: "Ocorrências: 5",
+  21: "Fatorial(5): 120",
+  22: "Hello World!",
+  23: "IMC: 22.857142857142858",
+  24: "MMC de 12 e 18: 36",
+  25: "Média: 20"
+};
 
 let exercicios = [];
 let exerciciosBenchmark = [];
@@ -20,7 +50,7 @@ let ppmCodigo = "";
 async function loadExercisesFromFiles() {
   const base = "anotacoes/LISTAS_EXERXICIOS/Lista1-29-08-25";
   const lista = [];
-  for (let i = 1; i <= 25; i++) {
+  for (let i = 1; i <= 26; i++) {
     const path = `${base}/ex${i}.go`;
     const resp = await fetch(path);
     if (!resp.ok) continue;
@@ -150,11 +180,46 @@ function showExercise(n) {
   const tabs = document.querySelectorAll(".exercise-tab");
   if (tabs[n - 1]) tabs[n - 1].classList.add("active");
 
+  // Usa a saída esperada do mapa
+  const output = expectedOutputs[n] || '';
+
   document.getElementById("exerciseContent").innerHTML = `
     <div class="exercise-display">
       <div class="exercise-enunciado"><h3>Exercício ${ex.numero}</h3><p>${ex.enunciado}</p></div>
       <div class="exercise-code"><h3>Código:</h3><pre><code>${escapeHtml(ex.codigo)}</code></pre></div>
+      ${output ? `<div class="exercise-output"><h3>Saída esperada:</h3><pre><code>${escapeHtml(output)}</code></pre></div>` : ''}
     </div>`;
+}
+
+function extractExpectedOutput(codigo) {
+  // Encontra e executa fmt.Println e fmt.Printf do código
+  let output = '';
+  
+  // Padrão: fmt.Println("texto") ou fmt.Printf(...)
+  const printlnPattern = /fmt\.Println\((.*?)\)/g;
+  const printfPattern = /fmt\.Printf\((.*?)\)/g;
+  
+  let match;
+  
+  // Processa Println
+  while ((match = printlnPattern.exec(codigo)) !== null) {
+    let args = match[1];
+    // Remove aspas e processa constantes simples
+    args = args.replace(/["']/g, '').replace(/\s+\+\s+/g, ' ');
+    output += args.trim() + '\n';
+  }
+  
+  // Processa Printf (mostra apenas a string de formato por enquanto)
+  while ((match = printfPattern.exec(codigo)) !== null) {
+    let content = match[1];
+    // Extrai string de formato
+    const strMatch = content.match(/"([^"]*)"/);
+    if (strMatch) {
+      output += strMatch[1] + '\n';
+    }
+  }
+  
+  return output.trim();
 }
 
 async function loadBenchmark() {
@@ -181,7 +246,126 @@ async function loadBenchmark() {
 
 async function loadPPMExercise() {
   if (!ppmCodigo) await loadPPM();
-  document.getElementById("ppmCode").textContent = ppmCodigo;
+  
+  // Carrega o arquivo PPM
+  let ppmHtml = '';
+  try {
+    const response = await fetch("anotacoes/LISTAS_EXERXICIOS/Lista4-17-10-25/ArquivoPPM/p3.ppm");
+    const ppmData = await response.text();
+    const parsedPPM = parsePPM(ppmData);
+    
+    if (parsedPPM) {
+      // Mostra a saída do programa
+      const output = generatePPMOutput(parsedPPM);
+      ppmHtml = `
+        <div class="exercise-output">
+          <h3>Saída do programa:</h3>
+          <pre><code>${escapeHtml(output)}</code></pre>
+        </div>
+        <div class="ppm-display">
+          <h3>Imagem PPM Gerada:</h3>
+          <canvas id="ppmCanvas" width="${parsedPPM.width * 50}" height="${parsedPPM.height * 50}"></canvas>
+        </div>
+      `;
+    }
+  } catch (err) {
+    console.error('Erro ao carregar PPM:', err);
+  }
+  
+  document.getElementById("ppmCode").innerHTML = `
+    <div class="ppm-container">
+      <div class="exercise-code"><h3>Código:</h3><pre><code>${escapeHtml(ppmCodigo)}</code></pre></div>
+      ${ppmHtml}
+    </div>
+  `;
+  
+  // Desenha a imagem no canvas
+  setTimeout(drawPPMImage, 100);
+}
+
+function parsePPM(ppmData) {
+  const lines = ppmData.split('\n').map(l => l.trim()).filter(l => l && !l.startsWith('#'));
+  
+  if (lines.length < 4) return null;
+  
+  const format = lines[0];
+  if (format !== 'P3') return null;
+  
+  const [width, height] = lines[1].split(' ').map(Number);
+  const maxVal = Number(lines[2]);
+  
+  // Coleta todos os valores de pixel
+  const pixels = [];
+  for (let i = 3; i < lines.length; i++) {
+    const values = lines[i].split(/\s+/).map(Number);
+    pixels.push(...values);
+  }
+  
+  return { format, width, height, maxVal, pixels };
+}
+
+function generatePPMOutput(ppm) {
+  let output = `Formato: ${ppm.format} | Largura: ${ppm.width} | Altura: ${ppm.height} | Máx: ${ppm.maxVal}\n\n`;
+  output += "Imagem criada:\n\n";
+  
+  // Renderiza blocos de cor usando caracteres
+  let idx = 0;
+  for (let y = 0; y < ppm.height; y++) {
+    for (let x = 0; x < ppm.width; x++) {
+      if (idx + 2 < ppm.pixels.length) {
+        idx += 3;
+      }
+    }
+    output += '\n';
+  }
+  
+  output += "Valores RGB de cada pixel:\n\n";
+  idx = 0;
+  let pixel = 1;
+  while (idx + 2 < ppm.pixels.length) {
+    const r = ppm.pixels[idx];
+    const g = ppm.pixels[idx + 1];
+    const b = ppm.pixels[idx + 2];
+    output += `Pixel ${pixel} = R:${r} G:${g} B:${b}\n`;
+    idx += 3;
+    pixel++;
+  }
+  
+  return output;
+}
+
+function drawPPMImage() {
+  const canvas = document.getElementById('ppmCanvas');
+  if (!canvas) return;
+  
+  const ctx = canvas.getContext('2d');
+  
+  // Carrega o arquivo PPM novamente para desenhar
+  fetch("anotacoes/LISTAS_EXERXICIOS/Lista4-17-10-25/ArquivoPPM/p3.ppm")
+    .then(r => r.text())
+    .then(ppmData => {
+      const ppm = parsePPM(ppmData);
+      if (!ppm) return;
+      
+      const pixelSize = Math.floor(canvas.width / ppm.width);
+      
+      let idx = 0;
+      for (let y = 0; y < ppm.height; y++) {
+        for (let x = 0; x < ppm.width; x++) {
+          if (idx + 2 < ppm.pixels.length) {
+            const r = ppm.pixels[idx];
+            const g = ppm.pixels[idx + 1];
+            const b = ppm.pixels[idx + 2];
+            
+            ctx.fillStyle = `rgb(${r}, ${g}, ${b})`;
+            ctx.fillRect(x * pixelSize, y * pixelSize, pixelSize, pixelSize);
+            
+            idx += 3;
+          }
+        }
+      }
+    })
+    .catch(err => console.error('Erro ao desenhar canvas:', err));
 }
 
 function escapeHtml(t) {

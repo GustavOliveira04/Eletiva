@@ -48,6 +48,16 @@ header {
   margin-bottom: 1rem;
 }
 
+/* Foto de perfil no header (substitua o arquivo em 'src' no index.html) */
+.profile-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgb(6, 255, 255);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
 header h1 {
   color: var(--branco);
   font-size: 2.5rem;
@@ -341,6 +351,74 @@ main {
   border-radius: 10px;
   margin-bottom: 1.5rem;
   border-left: 3px solid var(--azul);
+}
+
+.exercise-output {
+  background: #f0f9f7;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid #06d6a0;
+}
+
+.exercise-output h3 {
+  color: #06d6a0;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.exercise-error {
+  background: #fde4e4;
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid #f85149;
+}
+
+.exercise-error h3 {
+  color: #f85149;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.exercise-code {
+  background: var(--azul-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid var(--azul);
+}
+
+.exercise-code h3 {
+  color: var(--azul);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.ppm-display {
+  background: var(--azul-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  border-left: 3px solid var(--azul);
+  text-align: center;
+}
+
+.ppm-display h3 {
+  color: var(--azul);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.ppm-display canvas {
+  max-width: 100%;
+  border-radius: 8px;
+  border: 2px solid var(--azul);
+  image-rendering: pixelated;
 }
 
 .exercise-enunciado h3,
