@@ -3,7 +3,7 @@
 Este documento registra de forma organizada todas as atividades, aulas e eventos ocorridos durante o período letivo da matéria de Eletiva.
 
 ## Acesso ao portifólio
-Para ter acesso ao portifólio dessa Unidade Curricular **acesse o link**: 
+Para ter acesso ao portifólio dessa Unidade Curricular **acesse o link**: <https://portifolio-eletiva.vercel.app/>
 
 ## 📅 Registro das Aulas
 
