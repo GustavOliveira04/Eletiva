@@ -2,6 +2,12 @@
 
 Este documento registra de forma organizada todas as atividades, aulas e eventos ocorridos durante o período letivo da matéria de Eletiva.
 
+##
+* **Aluno:** Gustavo Felipe Oliveira Freitas
+* **Professor:** Alex Fernando de Araujo 
+* **Unidade Curricular:** Tópicos Especiais em Linguagem de Programação (Eletiva)
+* **IFMS - TADS**
+
 ## Acesso ao portifólio
 Para ter acesso ao portifólio dessa Unidade Curricular **acesse o link**: <https://portifolio-eletiva.vercel.app/>
 
@@ -68,3 +74,14 @@ Para ter acesso ao portifólio dessa Unidade Curricular **acesse o link**: <http
 ### **21/11/2025**
 
 * **Recesso – sem aula.**
+
+### **28/11/2025**
+
+* **Entrega do portifólio. Professor olhou os portifólios que estavam prontos e estendeu a data de entrega até o dia 05 de Dezembro.**
+
+### **05/12/2025**
+
+* **Professor não estará presente, fomos liberados da aula para finalizar ou entregar o portifólio via e-mail.**
+
+##
+*Portfólio feito como requisito avaliativo da disciplina.*
